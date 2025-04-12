@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import ProjectCard from "./components/ProjectCard";
 
 function App() {
   return (
