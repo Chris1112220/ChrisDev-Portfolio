@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 import ProjectCard from "./components/ProjectCard";
+
+const projects = [
+  {
+    title: "CryptoTrack Pro",
+    description: "A crypto portfolio tracker with P&L, DCA, and visual dashboards.",
+    tech_stack: "Flask, PostgreSQL, Chart.js, Docker",
+    repo_url: "https://github.com/Chris1112220/CryptoTrack-Pro",
+    live_url: "https://cryptotrack-pro.onrender.com",
+  },
+  {
+    title: "Personal Blog",
+    description: "A deployed Flask + PostgreSQL blog with user login and post management.",
+    tech_stack: "Flask, PostgreSQL, JWT, Docker",
+    repo_url: "https://github.com/Chris1112220/Personal-Blog",
+    live_url: "https://personal-blog-h41u.onrender.com",
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
+      <h1 className="text-3xl font-bold mb-6">My Projects</h1>
+      {projects.map((p, index) => (
+        <ProjectCard key={index} {...p} />
+      ))}
     </div>
   );
 }
