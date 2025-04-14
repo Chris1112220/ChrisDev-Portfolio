@@ -1,31 +1,18 @@
-import React from "react";
-import ProjectCard from "./components/ProjectCard";
-
-const projects = [
-  {
-    title: "CryptoTrack Pro",
-    description: "A crypto portfolio tracker with P&L, DCA, and visual dashboards.",
-    tech_stack: "Flask, PostgreSQL, Chart.js, Docker",
-    repo_url: "https://github.com/Chris1112220/CryptoTrack-Pro",
-    live_url: "https://cryptotrack-pro.onrender.com",
-  },
-  {
-    title: "Personal Blog",
-    description: "A deployed Flask + PostgreSQL blog with user login and post management.",
-    tech_stack: "Flask, PostgreSQL, JWT, Docker",
-    repo_url: "https://github.com/Chris1112220/Personal-Blog",
-    live_url: "https://personal-blog-h41u.onrender.com",
-  },
-];
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-8">
-      <h1 className="text-3xl font-bold mb-6">My Projects</h1>
-      {projects.map((p, index) => (
-        <ProjectCard key={index} {...p} />
-      ))}
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Projects />} />
+          <Route path="/about" element={<div>About Page Coming Soon</div>} />
+          <Route path="/contact" element={<div>Contact Page Coming Soon</div>} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
