@@ -1,8 +1,15 @@
 import React from "react";
 
+const stack = [
+  { label: "Automation", items: ["UiPath Studio", "UiPath Orchestrator", "Unattended Robots", "OCR", "n8n"] },
+  { label: "AI", items: ["Google Gemini", "LLM APIs", "Structured extraction"] },
+  { label: "Development", items: ["Python", "Flask", "React", "Tailwind CSS", "JavaScript", "PostgreSQL", "SQLite", "JWT", "Chart.js", "Docker", "Git / GitHub", "Vercel", "Render"] },
+  { label: "Finance systems", items: ["Banner Finance", "OnBase", "BlackLine", "Argos", "SAP ERP", "QuickBooks", "Google Workspace APIs", "Microsoft Excel"] },
+];
+
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-6 py-12">
+    <div className="py-6">
       <div className="max-w-3xl mx-auto space-y-8">
         <h1 className="text-4xl font-bold text-center">Hey, I’m Chris </h1>
 
@@ -21,16 +28,18 @@ export default function About() {
         </p>
 
         <div>
-          <h2 className="text-2xl font-semibold mb-4">🧰 Tech Stack</h2>
-          <div className="flex flex-wrap gap-3 text-sm text-gray-300">
-            <span className="bg-gray-800 px-3 py-1 rounded-full">React</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Tailwind</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Flask</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">PostgreSQL</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Python</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">UiPath</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Docker</span>
-            <span className="bg-gray-800 px-3 py-1 rounded-full">Git/GitHub</span>
+          <h2 className="text-2xl font-semibold mb-6">Tech Stack</h2>
+          <div className="space-y-5">
+            {stack.map((group) => (
+              <div key={group.label}>
+                <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-2">{group.label}</h3>
+                <div className="flex flex-wrap gap-2 text-sm text-gray-300">
+                  {group.items.map((item) => (
+                    <span key={item} className="bg-gray-800 px-3 py-1 rounded-full">{item}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -1,24 +1,59 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
+
+const links = [
+  { to: "/projects", label: "Projects" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+];
 
 export default function Layout() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
-      <nav className="flex justify-between items-center px-8 py-4 bg-gray-950 shadow-md">
-        <h1 className="text-2xl font-bold tracking-wide text-white">ChrisDev</h1>
-        <div className="flex space-x-6 text-lg">
-          <Link to="/" className="hover:text-gray-400">Projects</Link>
-          <Link to="/about" className="hover:text-gray-400">About</Link>
-          <Link to="/contact" className="hover:text-gray-400">Contact</Link>
+      <nav className="sticky top-0 z-10 bg-gray-950/90 backdrop-blur border-b border-gray-800">
+        <div className="max-w-6xl mx-auto flex justify-between items-center px-4 sm:px-8 py-4">
+          <Link to="/" className="text-xl font-bold tracking-wide">
+            Chris Roberts
+          </Link>
+          <div className="flex gap-4 sm:gap-6 text-sm sm:text-base">
+            {links.map((l) => (
+              <NavLink
+                key={l.to}
+                to={l.to}
+                className={({ isActive }) =>
+                  isActive ? "text-teal-400" : "text-gray-300 hover:text-white"
+                }
+              >
+                {l.label}
+              </NavLink>
+            ))}
+          </div>
         </div>
       </nav>
 
-      <main className="flex-grow p-8 bg-gray-900 text-white">
+      <main className="flex-grow px-4 sm:px-8 py-10">
         <Outlet />
       </main>
 
-      <footer className="text-center text-sm py-4 text-gray-500 border-t border-gray-700">
-        © 2025 ChrisDev Portfolio
+      <footer className="border-t border-gray-800 py-6 text-center text-sm text-gray-500">
+        © {new Date().getFullYear()} Chris Roberts ·{" "}
+        <a href="https://github.com/Chris1112220" target="_blank" rel="noreferrer" className="hover:text-gray-300">
+          GitHub
+        </a>{" "}
+        ·{" "}
+        <a
+          href="https://www.linkedin.com/in/christopher-roberts-philadelphia/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-gray-300"
+        >
+          LinkedIn
+        </a>
       </footer>
     </div>
   );
