@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function ProjectCard({ title, context, summary, impact, stack = [], repo, live }) {
-  const isPrivate = !repo && !live;
+export default function ProjectCard({ title, context, summary, impact, stack = [], repo, live, underConstruction }) {
+  const isPrivate = !repo && !live && !underConstruction;
 
   return (
     <article className="flex flex-col h-full bg-gray-800/60 border border-gray-700/60 rounded-xl p-6 hover:border-teal-500/50 transition-colors">
@@ -31,6 +31,12 @@ export default function ProjectCard({ title, context, summary, impact, stack = [
           <a href={live} target="_blank" rel="noreferrer" className="text-teal-400 hover:underline">
             Live demo
           </a>
+        )}
+        {underConstruction && (
+          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-wider text-amber-300 bg-amber-500/10 border border-amber-500/30 px-3 py-1 rounded-full cursor-default select-none">
+            <span aria-hidden="true">🚧</span>
+            Under construction
+          </span>
         )}
         {isPrivate && (
           <span className="text-gray-500">Code is private · built on the job</span>

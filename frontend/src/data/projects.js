@@ -72,8 +72,9 @@ const projects = [
       "Full-stack blog with user login and post management, built and deployed end to end.",
     impact: "",
     stack: ["Flask", "PostgreSQL", "JWT", "Docker"],
-    repo: "https://github.com/Chris1112220/Personal-Blog",
-    live: "https://personal-blog-h41u.onrender.com",
+    repo: "",
+    live: "",
+    underConstruction: true,
     featured: false,
   },
   {
