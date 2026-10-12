@@ -60,7 +60,7 @@ const projects = [
       "Splits combined ACH payment PDFs into individual documents, names them and files them automatically, running unattended in UiPath Orchestrator.",
     impact: "$50,000/year saved",
     stack: ["UiPath", "Orchestrator", "PDF"],
-    repo: "",
+    repo: "https://github.com/Chris1112220/uipath-ach-pdf-splitter",
     live: "",
     featured: true,
   },
