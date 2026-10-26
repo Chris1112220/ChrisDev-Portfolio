@@ -78,17 +78,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Two audiences */}
+      {/* Let's connect */}
       <section className="bg-gray-800/40 border border-gray-700/60 rounded-xl p-8 sm:p-10 text-center">
-        <h3 className="text-2xl font-semibold mb-3">Running a small business?</h3>
+        <h3 className="text-2xl font-semibold mb-3">Let's connect</h3>
         <p className="text-gray-400 mb-6 leading-relaxed max-w-2xl mx-auto">
-          If your team spends hours keying invoices or reconciling by hand, let's talk about taking that off their plate.
+          Questions about one of these projects, or want a walkthrough of how a bot works? I'm always happy to talk automation.
         </p>
         <Link
           to="/contact"
           className="inline-block bg-teal-500 hover:bg-teal-400 text-gray-950 font-semibold px-6 py-3 rounded-lg"
         >
-          Start a conversation
+          Get in touch
         </Link>
       </section>
     </div>
