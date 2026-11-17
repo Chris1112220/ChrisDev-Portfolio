@@ -31,8 +31,9 @@ export default function Home() {
         </h1>
         <p className="text-lg text-gray-300 mt-6 max-w-2xl leading-relaxed">
           I'm an accountant who builds the tools. I've put <span className="text-white font-semibold">10+ production UiPath bots</span> into
-          service, running unattended so a whole finance department can use them, and the biggest one alone saves
-          about 1,800 hours a year. Now I help small businesses that are drowning in data entry get that time back.
+          service, running unattended so a whole finance department can use them. Together they save
+          5,000+ hours (~$200K) a year. The biggest, an ACH document-intake bot, saves 4,300+ hours (~$156K) a year
+          across 20 staff accountants. Now I help small businesses that are drowning in data entry get that time back.
         </p>
         <div className="flex flex-wrap gap-4 mt-8">
           <Link

@@ -26,7 +26,7 @@ Copy an existing entry, fill in the fields, and push. Vercel redeploys automatic
 | `category` | `automation`, `ai` or `web` (drives the filter buttons) |
 | `context` | `Personal`, or the employer or client |
 | `summary` | One or two sentences on what it does and who it helps |
-| `impact` | Optional result in numbers, e.g. `$50,000/year saved` |
+| `impact` | Optional result in numbers, e.g. `4,300+ hours (~$156K)/year saved` |
 | `stack` | List of tools used |
 | `repo` | GitHub link, or `""` if the code is private |
 | `live` | Live demo link, or `""` |

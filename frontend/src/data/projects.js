@@ -6,7 +6,7 @@
 //   category  – "automation" | "ai" | "web"   (used for the filter buttons)
 //   context   – "Personal" or the employer/client name, e.g. "Drexel University"
 //   summary   – one or two sentences: what it does and who it helps
-//   impact    – optional, the result in numbers (e.g. "1,800 hours/year saved")
+//   impact    – optional, the result in numbers (e.g. "4,300+ hours (~$156K)/year saved")
 //   stack     – list of tools
 //   repo      – GitHub link, or "" if the code is private
 //   live      – live demo link, or ""
@@ -34,7 +34,7 @@ const projects = [
     context: "Drexel University",
     summary:
       "Automates journal entry creation in Banner for finance staff across the university, so 50 users stop keying entries by hand.",
-    impact: "1,800 hours/year saved",
+    impact: "",
     stack: ["UiPath", "RPA", "Banner"],
     repo: "",
     live: "",
@@ -58,7 +58,7 @@ const projects = [
     context: "Drexel University",
     summary:
       "Splits combined ACH payment PDFs into individual documents, names them and files them automatically, running unattended in UiPath Orchestrator.",
-    impact: "$50,000/year saved",
+    impact: "4,300+ hours (~$156K)/year saved",
     stack: ["UiPath", "Orchestrator", "PDF"],
     repo: "https://github.com/Chris1112220/uipath-ach-pdf-splitter",
     live: "",
