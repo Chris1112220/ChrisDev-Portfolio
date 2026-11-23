@@ -11,6 +11,7 @@
 //   repo      – GitHub link, or "" if the code is private
 //   live      – live demo link, or ""
 //   featured  – true to also show it on the home page
+//   showcase  - true to use the richer Showcase section on the home page instead of the featured grid
 //
 // Projects show in the order they appear here.
 // ─────────────────────────────────────────────────────────────
@@ -27,6 +28,7 @@ const projects = [
     repo: "https://github.com/Chris1112220/email-triage-agent",
     live: "",
     featured: true,
+    showcase: true,
   },
   {
     title: "Chok Dee Muay Thai",
@@ -39,6 +41,7 @@ const projects = [
     repo: "https://github.com/Chris1112220/muay-thai-sessions",
     live: "https://luckymuaythai.vercel.app",
     featured: true,
+    showcase: true,
   },
   {
     title: "AI Invoice Extraction",

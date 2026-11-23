@@ -5,21 +5,29 @@ export default function About() {
   return (
     <div className="py-6">
       <div className="max-w-3xl mx-auto space-y-8">
-        <h1 className="text-4xl font-bold text-center">Hey, I’m Chris </h1>
+        <header className="text-center space-y-3">
+          <h1 className="text-4xl sm:text-6xl font-bold leading-tight">Hey I'm Chris</h1>
+          <p className="text-3xl sm:text-5xl font-bold text-teal-400 leading-tight">Automation Accountant</p>
+          <p className="text-lg sm:text-xl text-gray-400">Automator by Passion</p>
+        </header>
 
-        <p className="text-lg text-gray-300 text-center">
-          Accountant and Dev by day. Automator by passion. Thai-boxer by necessity.
-        </p>
-
-        <p className="text-md text-gray-400">
-          I’m a software developer and automation enthusiast with a background in finance. 
-          I’ve built full-stack apps using Flask, PostgreSQL, and React, and I’ve also built robots that save thousands of hours/year at a large university using UiPath. 
-          If I’m not coding, I’m probably throwing kicks, or building dashboards.
-        </p>
-
-        <p className="text-md text-gray-400">
-          My approach: automate the boring stuff, make it look good, and never stop improving.
-        </p>
+        <div className="space-y-4 text-md text-gray-400">
+          <p>
+            I'm an accountant who builds the tools. These days I split my time about 50/50 between accounting and automation at a large university.
+          </p>
+          <p>
+            I've built 10+ UiPath bots that save 5,000+ hours (~$200K) a year. The biggest is an ACH document-intake bot that saves 4,300+ hours (~$156K) a year across 20 staff accountants. I also helped the team close year-end while we were down one person.
+          </p>
+          <p>
+            I came up through accounting. I earned a BBA in Finance from Temple University (2007 to 2012), then a graduate certificate in Computer Science (Foundations) from 2023 to January 2024. I started building bots on top of a full accounting workload, and now that's half the job.
+          </p>
+          <p>
+            On my own time I build AI and web projects. Email Triage is a LangGraph and Gemini agent that reads Gmail, classifies mail, and drafts a reply when one is needed. It never sends email. Chok Dee Muay Thai is a Next.js app that builds a timed watch session from a shared YouTube pool. I'm also building Little Limits, an iPhone app that tracks baby product usage limits and flags recalls. That one is still a work in progress.
+          </p>
+          <p>
+            I direct AI agents and review their output. AI agents wrote much of the code on those projects.
+          </p>
+        </div>
 
         <div>
           <h2 className="text-2xl font-semibold mb-6">Tech Stack</h2>
@@ -27,7 +35,7 @@ export default function About() {
         </div>
 
         <p className="text-center text-gray-500 italic pt-4">
-          Scroll on, or shoot me a message if you want to talk tech or Muay Thai.
+          If you want to talk automation, or Muay Thai, send me a message.
         </p>
       </div>
     </div>

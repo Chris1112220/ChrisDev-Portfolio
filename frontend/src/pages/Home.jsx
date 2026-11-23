@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
-import projects from "../data/projects";
+import ShowcaseCard from "../components/ShowcaseCard";
 import TechStack from "../components/TechStack";
+import projects from "../data/projects";
+import showcase from "../data/showcase";
 
 const services = [
   {
@@ -20,16 +22,21 @@ const services = [
 ];
 
 export default function Home() {
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects.filter((p) => p.featured && !p.showcase);
 
   return (
     <div className="max-w-6xl mx-auto space-y-20">
       {/* Hero */}
       <section className="pt-6 sm:pt-12">
-        <p className="text-teal-400 font-medium mb-4">Automation Developer</p>
         <h1 className="text-4xl sm:text-6xl font-bold leading-tight max-w-3xl">
-          I'm Chris. I automate the manual work in accounting.
+          Hey I'm Chris
         </h1>
+        <p className="text-3xl sm:text-5xl font-bold text-teal-400 mt-3 leading-tight">
+          Automation Accountant
+        </p>
+        <p className="text-lg sm:text-xl text-gray-400 mt-3">
+          Automator by Passion
+        </p>
         <p className="text-lg text-gray-300 mt-6 max-w-2xl leading-relaxed">
           I'm an accountant who builds the tools. I've put <span className="text-white font-semibold">10+ production UiPath bots</span> into
           service, running unattended so a whole finance department can use them. Together they save
@@ -65,6 +72,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Showcase */}
+      <section>
+        <h2 className="text-2xl font-bold mb-6">Showcase</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          {showcase.map((p) => (
+            <ShowcaseCard key={p.title} {...p} />
+          ))}
+        </div>
+      </section>
+
       {/* Tech stack */}
       <section>
         <h2 className="text-2xl font-bold mb-6">Tech Stack</h2>
@@ -76,7 +93,7 @@ export default function Home() {
         <div className="flex items-end justify-between mb-6">
           <h2 className="text-2xl font-bold">Featured work</h2>
           <Link to="/projects" className="text-teal-400 hover:underline text-sm">
-            All projects →
+            All projects
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
