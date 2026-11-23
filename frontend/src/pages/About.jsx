@@ -19,7 +19,7 @@ export default function About() {
 
         <p className="text-md text-gray-400">
           I’m a software developer and automation enthusiast with a background in finance. 
-          I’ve built full-stack apps using Flask, PostgreSQL, and React — and I’ve also built robots that save thousands of hours/year at Drexel using UiPath. 
+          I’ve built full-stack apps using Flask, PostgreSQL, and React — and I’ve also built robots that save thousands of hours/year at a large university using UiPath. 
           If I’m not coding, I’m probably throwing kicks, or building dashboards.
         </p>
 

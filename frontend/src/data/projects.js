@@ -4,7 +4,7 @@
 // To add one, copy a block below and fill it in:
 //   title     – project name
 //   category  – "automation" | "ai" | "web"   (used for the filter buttons)
-//   context   – "Personal" or the employer/client name, e.g. "Drexel University"
+//   context   – "Personal" or a short setting, e.g. "A large university"
 //   summary   – one or two sentences: what it does and who it helps
 //   impact    – optional, the result in numbers (e.g. "4,300+ hours (~$156K)/year saved")
 //   stack     – list of tools
@@ -16,6 +16,30 @@
 // ─────────────────────────────────────────────────────────────
 
 const projects = [
+  {
+    title: "Email Triage Agent",
+    category: "ai",
+    context: "Personal",
+    summary:
+      "A LangGraph and Gemini agent that reads Gmail, classifies each email into 10 business-inbox categories, can add triage labels, and drafts a reply when one is needed. It never sends email. Classify is traced in LangSmith. A model fallback chain tries three Gemini models, then keyword rules. I directed the AI agents and reviewed their output; AI agents wrote much of the code.",
+    impact: "14/15 (93%) on a 15-email eval set; 19 pytest tests in GitHub Actions on every push",
+    stack: ["LangGraph", "Google Gemini", "Gmail API", "LangSmith", "FastAPI", "pytest", "GitHub Actions"],
+    repo: "https://github.com/Chris1112220/email-triage-agent",
+    live: "",
+    featured: true,
+  },
+  {
+    title: "Chok Dee Muay Thai",
+    category: "web",
+    context: "Personal",
+    summary:
+      "A TypeScript Next.js site that builds a timed Muay Thai watch session from a shared YouTube video pool, so page views do not spend API quota. I wrote the spec and tickets, built the session picker test-first, and reviewed the diffs; AI agents wrote much of the application code.",
+    impact: "66 Vitest tests in GitHub Actions on every push and pull request",
+    stack: ["TypeScript", "Next.js", "React", "Upstash Redis", "Vercel", "YouTube Data API", "Vitest"],
+    repo: "https://github.com/Chris1112220/muay-thai-sessions",
+    live: "https://luckymuaythai.vercel.app",
+    featured: true,
+  },
   {
     title: "AI Invoice Extraction",
     category: "ai",
@@ -31,7 +55,7 @@ const projects = [
   {
     title: "Journal Entry Community Bot",
     category: "automation",
-    context: "Drexel University",
+    context: "A large university",
     summary:
       "Automates journal entry creation in Banner for finance staff across the university, so 50 users stop keying entries by hand.",
     impact: "",
@@ -43,7 +67,7 @@ const projects = [
   {
     title: "Bank Statement Posting Bot",
     category: "automation",
-    context: "Drexel University",
+    context: "A large university",
     summary:
       "Reads bank statements with OCR, prepares the journal entries, and posts them automatically.",
     impact: "72 hours/year saved",
@@ -55,7 +79,7 @@ const projects = [
   {
     title: "ACH PDF Splitter Bot",
     category: "automation",
-    context: "Drexel University",
+    context: "A large university",
     summary:
       "Splits combined ACH payment PDFs into individual documents, names them and files them automatically, running unattended in UiPath Orchestrator.",
     impact: "4,300+ hours (~$156K)/year saved",
