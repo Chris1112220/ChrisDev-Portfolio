@@ -1,11 +1,5 @@
 import React from "react";
-
-const stack = [
-  { label: "Automation", items: ["UiPath Studio", "UiPath Orchestrator", "Unattended Robots", "OCR", "n8n"] },
-  { label: "AI", items: ["Google Gemini", "LLM APIs", "Structured extraction"] },
-  { label: "Development", items: ["Python", "Flask", "React", "Tailwind CSS", "JavaScript", "PostgreSQL", "SQLite", "JWT", "Chart.js", "Docker", "Git / GitHub", "Vercel", "Render"] },
-  { label: "Finance systems", items: ["Banner Finance", "OnBase", "BlackLine", "Argos", "SAP ERP", "QuickBooks", "Google Workspace APIs", "Microsoft Excel"] },
-];
+import TechStack from "../components/TechStack";
 
 export default function About() {
   return (
@@ -29,18 +23,7 @@ export default function About() {
 
         <div>
           <h2 className="text-2xl font-semibold mb-6">Tech Stack</h2>
-          <div className="space-y-5">
-            {stack.map((group) => (
-              <div key={group.label}>
-                <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-2">{group.label}</h3>
-                <div className="flex flex-wrap gap-2 text-sm text-gray-300">
-                  {group.items.map((item) => (
-                    <span key={item} className="bg-gray-800 px-3 py-1 rounded-full">{item}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          <TechStack />
         </div>
 
         <p className="text-center text-gray-500 italic pt-4">

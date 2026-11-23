@@ -7,7 +7,7 @@ export default function Contact() {
         <h1 className="text-4xl font-bold text-center">Let’s Connect 📬</h1>
 
         <p className="text-lg text-gray-300 text-center">
-          Whether you want to work together, talk automation, or just say hi — I’d love to hear from you.
+          Whether you want to work together, talk automation, or just say hi. I’d love to hear from you.
         </p>
 
         <div className="flex flex-col gap-4 text-center text-lg text-gray-300">

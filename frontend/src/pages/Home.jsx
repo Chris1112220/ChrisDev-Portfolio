@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import projects from "../data/projects";
+import TechStack from "../components/TechStack";
 
 const services = [
   {
@@ -62,6 +63,12 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Tech stack */}
+      <section>
+        <h2 className="text-2xl font-bold mb-6">Tech Stack</h2>
+        <TechStack />
       </section>
 
       {/* Featured */}
